@@ -12,14 +12,10 @@ module.exports = {
     extensions: ['', '.js', '.ts']
   },
   loaders: [
-    { test: /.ts$/, loader: 'awesome-typescript-loader' }
+    {
+      test: /.js$/, 
+      loader: 'babel', 
+      exclude: /node_modules/
+    }
   ]
-  // plugins: [
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor'
-    // })
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: { warnings: false }
-    // })
-  // ]
 };

@@ -1,3 +1,3 @@
-import { myString } from './library';
+import { myString, myNumber } from './library';
 
 console.log(myString);

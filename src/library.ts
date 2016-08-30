@@ -1,2 +1,2 @@
-export let myString = 'hello';
-export let myNumber = 5;
+export var myString = 'hello';
+export var myNumber = 5;

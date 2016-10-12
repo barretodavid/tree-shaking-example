@@ -1,3 +1,3 @@
-import { myString } from './library';
+import { myNumber } from './library';
 
-console.log(myString);
+console.log(myNumber);

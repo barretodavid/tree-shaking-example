@@ -1,18 +1,10 @@
 const webpack = require('webpack');
 
-const basePlugins = [
-  // new webpack.optimize.CommonsChunkPlugin({
-  //   name: 'vendor'
-  // })
-];
+const basePlugins = [];
 
 const prodPlugins = [
   new webpack.optimize.UglifyJsPlugin({
-    compress: { 
-      warnings: false,
-      dead_code: true,
-      unused: true
-    }
+    compress: { warnings: false }
   })
 ];
 
@@ -23,7 +15,6 @@ module.exports = {
   context: './src',
   entry: {
     app: './index.ts'
-    // vendor: ['./library.ts']
   },
   output: {
     path: './dist',

@@ -1,8 +1,8 @@
 {
-  "name": "webpack-ng2-rc5-blog",
+  "name": "tree-shaking-example",
   "version": "1.0.0",
-  "description": "something",
-  "main": "index.js",
+  "description": "An example app",
+  "main": "dist/app.js",
   "repository": {},
   "scripts": {
     "clean": "rm -rf dist",
@@ -12,9 +12,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "2.1.0-beta.21",
-    "webpack-dev-server": "2.1.0-beta.0",
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.45",
+    "awesome-typescript-loader": "2.2.1",
     "typescript": "2.0.2",
-    "awesome-typescript-loader": "2.2.1"
+    "webpack": "2.1.0-beta.21",
+    "webpack-dev-server": "2.1.0-beta.0"
   }
 }

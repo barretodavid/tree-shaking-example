@@ -4,7 +4,9 @@ const basePlugins = [];
 
 const prodPlugins = [
   new webpack.optimize.UglifyJsPlugin({
-    compress: { warnings: false }
+    compress: { 
+      warnings: false
+    }
   })
 ];
 
@@ -12,19 +14,21 @@ const plugins = basePlugins
   .concat((process.env.NODE_ENV === 'production') ? prodPlugins: []);
 
 module.exports = {
-  context: './src',
+  context: __dirname + '/src',
   entry: {
     app: './index.ts'
   },
   output: {
-    path: './dist',
+    path: __dirname + '/dist',
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.ts', '.js']
   },
-  loaders: [
-    { test: /.ts$/, loader: 'awesome-typescript-loader' }
-  ],
+  module: {
+    loaders: [
+      { test: /\.ts$/, loader: 'awesome-typescript-loader' }
+    ]
+  },
   plugins: plugins
 };

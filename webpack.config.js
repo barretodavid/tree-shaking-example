@@ -1,21 +1,24 @@
 const webpack = require('webpack');
 
 module.exports = {
+  context: __dirname + '/src',
   entry: {
-    app: './src/index.ts'
+    app: './index.js'
   },
   output: {
-    path: './dist',
+    path: __dirname + '/dist',
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['.js']
   },
-  loaders: [
-    {
-      test: /.js$/, 
-      loader: 'babel', 
-      exclude: /node_modules/
-    }
-  ]
+  module: {
+    loaders: [
+      {
+        test: /\.js$/, 
+        loader: 'babel', 
+        exclude: /node_modules/
+      }
+    ]
+  }
 };

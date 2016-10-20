@@ -1,13 +1,13 @@
 {
-  "name": "webpack-ng2-rc5-blog",
+  "name": "tree-shaking-example",
   "version": "1.0.0",
-  "description": "something",
-  "main": "index.js",
+  "description": "An example app",
+  "main": "dist/app.js",
   "repository": {},
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && webpack",
-    "build:prod": "npm run clean && webpack -p"
+    "build": "npm run clean && NODE_ENV=development webpack",
+    "build:prod": "npm run clean && NODE_ENV=production webpack"
   },
   "author": "",
   "license": "ISC",

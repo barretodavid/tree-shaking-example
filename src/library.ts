@@ -1,5 +1,8 @@
 export class Person {
-  public name: string = 'David';
+  private name: string = 'David';
+  public getName(): string {
+    return this.name;
+  }
 }
 
 export var myString = 'hello';

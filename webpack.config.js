@@ -27,7 +27,13 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'awesome-typescript-loader' }
+      { 
+        test: /\.ts$/, 
+        loader: 'awesome-typescript-loader',
+        query: {
+          useBabel: true
+        } 
+      }
     ]
   },
   plugins: plugins
